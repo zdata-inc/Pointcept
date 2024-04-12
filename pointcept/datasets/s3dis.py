@@ -103,8 +103,8 @@ class S3DISDataset(Dataset):
             instance=instance,
             scene_id=scene_id,
         )
-        if "normal" in data.keys():
-            data_dict["normal"] = data["normal"]
+        # if "normal" in data.keys():
+        #     data_dict["normal"] = data["normal"]
         return data_dict
 
     def get_data_name(self, idx):

@@ -110,7 +110,7 @@ class ScanNetDataset(Dataset):
             instance = np.ones(coord.shape[0]) * -1
         data_dict = dict(
             coord=coord,
-            normal=normal,
+            # normal=normal,
             color=color,
             segment=segment,
             instance=instance,

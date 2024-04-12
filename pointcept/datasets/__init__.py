@@ -8,6 +8,7 @@ from .scannet import ScanNetDataset, ScanNet200Dataset
 from .scannet_pair import ScanNetPairDataset
 from .arkitscenes import ArkitScenesDataset
 from .structure3d import Structured3DDataset
+from .mw import MWDataset
 
 # outdoor scene
 from .semantic_kitti import SemanticKITTIDataset

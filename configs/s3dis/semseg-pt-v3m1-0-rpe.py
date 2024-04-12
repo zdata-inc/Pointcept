@@ -1,8 +1,8 @@
 _base_ = ["../_base_/default_runtime.py"]
 
 # misc custom setting
-batch_size = 12  # bs: total bs in all gpus
-num_worker = 24
+batch_size = 4  # bs: total bs in all gpus
+num_worker = 4
 mix_prob = 0.8
 empty_cache = False
 enable_amp = True
@@ -66,7 +66,7 @@ param_dicts = [dict(keyword="block", lr=0.0006)]
 
 # dataset settings
 dataset_type = "S3DISDataset"
-data_root = "data/s3dis"
+data_root = "/home/asakhare/data/s3dis"
 
 data = dict(
     num_classes=13,
@@ -112,6 +112,7 @@ data = dict(
             dict(
                 type="GridSample",
                 grid_size=0.02,
+                keys=("coord", "color", "segment"),
                 hash_type="fnv",
                 mode="train",
                 return_grid_coord=True,
@@ -125,7 +126,7 @@ data = dict(
             dict(
                 type="Collect",
                 keys=("coord", "grid_coord", "segment"),
-                feat_keys=("color", "normal"),
+                feat_keys=("coord", "color"),
             ),
         ],
         test_mode=False,
@@ -145,6 +146,7 @@ data = dict(
                 grid_size=0.02,
                 hash_type="fnv",
                 mode="train",
+                keys=("coord", "color", "segment"),
                 return_grid_coord=True,
             ),
             dict(type="CenterShift", apply_z=False),
@@ -160,7 +162,7 @@ data = dict(
                     "origin_segment",
                 ),
                 offset_keys_dict=dict(offset="coord", origin_offset="origin_coord"),
-                feat_keys=("color", "normal"),
+                feat_keys=("coord", "color"),
             ),
         ],
         test_mode=False,
@@ -180,7 +182,7 @@ data = dict(
                 grid_size=0.02,
                 hash_type="fnv",
                 mode="test",
-                keys=("coord", "color", "normal"),
+                keys=("coord", "color", "segment"),
                 return_grid_coord=True,
             ),
             crop=None,
@@ -190,7 +192,7 @@ data = dict(
                 dict(
                     type="Collect",
                     keys=("coord", "grid_coord", "index"),
-                    feat_keys=("color", "normal"),
+                    feat_keys=("coord", "color"),
                 ),
             ],
             aug_transform=[
