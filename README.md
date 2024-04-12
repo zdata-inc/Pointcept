@@ -12,7 +12,7 @@
 
 [![Formatter](https://github.com/pointcept/pointcept/actions/workflows/formatter.yml/badge.svg)](https://github.com/pointcept/pointcept/actions/workflows/formatter.yml)
 
-**Pointcept** is a powerful and flexible codebase for point cloud perception research. It is also an official implementation of the following paper:
+**Pointcept** is a powerful and flexible codebase for point cloud perception research. It is also an official implementation of the following paper: 
 - **Point Transformer V3: Simpler, Faster, Stronger**  
 *Xiaoyang Wu, Li Jiang, Peng-Shuai Wang, Zhijian Liu, Xihui Liu, Yu Qiao, Wanli Ouyang, Tong He, Hengshuang Zhao*  
 IEEE Conference on Computer Vision and Pattern Recognition (**CVPR**) 2024  
