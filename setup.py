@@ -6,7 +6,7 @@ VERSION = '1.0.0'
 DESCRIPTION = 'Enfuse implementation of PointTransformerV3 model'
 AUTHOR = 'zdata-inc.com'
 EMAIL = 'asakhare@zdatainc.com'
-URL = 'https://github.com/zdata-inc/PointTransformerV3'
+URL = 'https://github.com/zdata-inc/Pointcept.git'
 LICENSE = 'MIT'
 PYTHON_VERSION = '>=3.11.0'
 
