@@ -43,5 +43,5 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Operating System :: OS Independent'
     ],
-    exclude_package_data={'pointcept': [exclude_dir]}
+    exclude_package_data={'pointcept': [exclude_package_data]}
 )
