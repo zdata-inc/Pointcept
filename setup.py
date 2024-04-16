@@ -19,7 +19,7 @@ with open('requirements.txt', 'r') as f:
     required_packages = f.read().splitlines()
 
 # Specify the directory to include
-package_data = {'pointcept.datasets.preprocessing': ['*']}
+package_data = {'pointcept': ['datasets/preprocessing/*']}
 
 setup(
     name = NAME,
