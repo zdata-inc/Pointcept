@@ -20,7 +20,6 @@ with open('requirements.txt', 'r') as f:
 
 # Specify the directory to include
 package_data = {'pointcept': ['datasets/preprocessing/**/*']}
-exclude_package_data = 'datasets/*'
 
 setup(
     name = NAME,
@@ -34,8 +33,8 @@ setup(
     license = LICENSE,
     python_requires = PYTHON_VERSION,
     packages=find_packages(),
-    # package_data=package_data,
-    # include_package_data=True,
+    package_data=package_data,
+    include_package_data=True,
     install_requires = required_packages,
     classifiers = [
         'Development Status :: 4 - Production/Beta',
@@ -43,5 +42,4 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Operating System :: OS Independent'
     ],
-    exclude_package_data={'pointcept': [exclude_package_data]}
 )
