@@ -34,6 +34,7 @@ setup(
     python_requires = PYTHON_VERSION,
     packages=find_packages(),
     package_data=package_data,
+    include_package_data=True,
     install_requires = required_packages,
     classifiers = [
         'Development Status :: 4 - Production/Beta',
