@@ -18,6 +18,8 @@ with open('README.md', 'r', encoding = 'utf-8') as f:
 with open('requirements.txt', 'r') as f:
     required_packages = f.read().splitlines()
 
+# Specify the directory to include
+package_data = {'pointcept.datasets.preprocessing': ['*']}
 
 setup(
     name = NAME,
@@ -31,6 +33,7 @@ setup(
     license = LICENSE,
     python_requires = PYTHON_VERSION,
     packages=find_packages(),
+    package_data=package_data,
     install_requires = required_packages,
     classifiers = [
         'Development Status :: 4 - Production/Beta',
